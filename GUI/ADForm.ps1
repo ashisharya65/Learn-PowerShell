@@ -55,15 +55,18 @@ $Clear.Font = New-Object System.Drawing.Font('Microsoft Sans Serif', 10)
 $Form.controls.AddRange(@($UserName, $LastPasswdSet, $UserNameTxtBox, $LastPwdSetTxtBox, $Submit, $Clear))
 
 
-#region Logic 
+#region Submit Button logic 
 $Submit.add_click({
 
 
     })
+#endregion
 
+#region Clear Button logic 
 $Clear.add_click({
     
     })
 #endregion
 
+#Show form
 [void]$Form.ShowDialog()
