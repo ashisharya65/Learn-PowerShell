@@ -43,3 +43,20 @@ foreach ($key in ($JSON.Psobject.Properties.Name)) {
 # Converting the data again to JSON format
 $JSON | ConvertTo-Json
 
+
+
+### Output ######
+
+<#
+ "First Name": "Rishabh",
+  "Last Name": "Gupta",
+  "Date of Birth": "05 April 1989",
+  "Marital Status": "Single",
+  "Company": "XYZCorp",
+  "Designation": "Analyst - IT Ops",
+  "Experience": "8 years",
+  "Primary Skills": "PowerShell",
+  "DOJ": "16 August 2022",
+  "Location": "Mumbai",
+  "Home Address": "Lajpat Nagar UP"
+ #>
