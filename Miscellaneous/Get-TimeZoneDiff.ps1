@@ -5,6 +5,9 @@
     
     .Description
     PowerShell script to determine the timezone difference between the local timezone and the remote location timezones.
+    This script is developed by the Microsoft MVP Ravikant Chaganti and mentioned in his blog mentioned below :
+    
+    https://ravichaganti.com/blog/2023-03-20-determining-time-zone-differences-in-powershell-for-effective-meeting-planning/
     
     .Notes
     Author : Ravikant Chaganti
