@@ -118,7 +118,8 @@ Function Set-EnvtVariables {
             [System.Environment]::SetEnvironmentVariable($EnvtVar.Name, $EnvtVar.Value, [System.EnvironmentVariableTarget]::User)
         }
         Catch {
-            Write-Host "Unable to set the $($EnvtVar.Name) environment value." -foreground 'Red'
+            Write-Host "Unable to set the $($EnvtVar.Name) environment value and due to this the tool will not work." -foreground 'Red'
+            Exit
         }
         
     }
