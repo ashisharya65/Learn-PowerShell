@@ -128,13 +128,7 @@ Function Set-EnvtVariables {
 if ($null -eq (Get-ChildItem env: | Where-Object { $_.Name -like "Azure_*" })) {
     Write-Host "`nThe environment variables for Azure AD app are not created. Hence creating..." -ForegroundColor "Yellow"
 
-    try {
-        Set-EnvtVariables
-    }
-    catch {
-        Write-Host "Unable to create the environment variables." -ForegroundColor "Red"
-        break;
-    }
+    Set-EnvtVariables
 }
 
 #Checking and Verifying if the latest Microsoft.Graph Module is installed or not
