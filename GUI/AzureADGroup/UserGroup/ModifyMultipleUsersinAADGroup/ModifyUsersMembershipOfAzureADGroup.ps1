@@ -1,3 +1,4 @@
+
 <#
     .SYNOPSIS
         Tool built using PowerShell & WPF to modify users membership in an Azure AD group.
@@ -9,6 +10,7 @@
             [ ] - An app registered in your Azure AD tenant.
             [ ] - Latest version of Microsoft Graph PowerShell module installed on your local machine.
             [ ] - Setting the Windows Environment variables in your local machine
+            [ ] - A CSV file containing the users UPN details. One template for CSV file is attached in the repo.
 
         This tool will be checking whether the Environment variables for your Azure AD app are set or not. If not then it will be asking you to provide the
         credentials of your Azure AD app like Client id, Client secret and tenant id.
