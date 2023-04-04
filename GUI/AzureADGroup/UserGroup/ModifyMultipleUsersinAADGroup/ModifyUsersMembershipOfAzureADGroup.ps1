@@ -176,15 +176,16 @@ Connect-MgGraph -TenantId $TenantID -ClientSecretCredential $ClientSecretCredent
 [xml]$Form = @"
 <Window 
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        Title="Modifying Users Membership in an Azure AD Group" WindowStartupLocation="CenterScreen" Height="300" Width="500" Background="#022555" ResizeMode="NoResize">
+        Title="Modifying Users Membership in Azure AD Group" WindowStartupLocation="CenterScreen" Height="300" Width="500" Background="#022555" ResizeMode="NoResize">
     <Grid>
         <Label Name="PathToCSV" Content="Path" HorizontalAlignment="Left" Margin="25,22,0,0" VerticalAlignment="Top" Height="33" Width="130" FontFamily="Calibri" FontSize="14" FontWeight="Bold" Foreground="#ffffff"/>
         <Label Name="AzureADGroupName" Content="Group" HorizontalAlignment="Left" Margin="25,55,0,0" VerticalAlignment="Top" Height="33" Width="145" FontFamily="Calibri" FontSize="14" FontWeight="Bold" Foreground="#ffffff"/>
         <Label Name="Result" Content="Result" HorizontalAlignment="Left" Margin="25,155,0,0" VerticalAlignment="Top" Height="33" Width="145" FontFamily="Calibri" FontSize="14" FontWeight="Bold" Foreground="#ffffff"/>
         <TextBox Name="PathToCSVBox" HorizontalAlignment="Left" Height="20" Margin="80,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" ToolTip="type the correct path of CSV file" AutomationProperties.HelpText="type the correct path of CSV file"/>
         <TextBox Name="AADGroupBox" HorizontalAlignment="Left" Height="20" Margin="80,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" ToolTip="Type valid Azure AD Group Name" AutomationProperties.HelpText="Type valid Azure AD Group Name"/>
-        <Button Name="AddButton" Content="Add" HorizontalAlignment="Left" Margin="60,110,0,0" VerticalAlignment="Top" Height="33" Width="75" Foreground="#ffffff" Background="#417505" FontSize="14" FontWeight="Bold" RenderTransformOrigin="2,1.227" ToolTip="add user to the specified group" AutomationProperties.HelpText="add user to the specified group"/>
-        <Button Name="RemoveButton" Content="Remove" HorizontalAlignment="Left" Margin="195,110,0,0" VerticalAlignment="Top" Height="33" Width="75" Foreground="#ffffff" Background="#417505" FontSize="14" FontWeight="Bold" RenderTransformOrigin="2,1.227" ToolTip="remove user from the specified group" AutomationProperties.HelpText="remove user from the specified group"/>
+        <Button Name="BrowseButton" Content="Browse" HorizontalAlignment="Left" Margin="350,28,0,0" VerticalAlignment="Top" Height="22" Width="75" Foreground="#ffffff" Background="#417505" FontSize="14" FontWeight="Bold" RenderTransformOrigin="2,1.227" ToolTip="Browse to the path of CSV file" AutomationProperties.HelpText="Browse to the path of CSV file"/>
+        <Button Name="AddButton" Content="Add" HorizontalAlignment="Left" Margin="60,110,0,0" VerticalAlignment="Top" Height="33" Width="75" Foreground="#ffffff" Background="#417505" FontSize="14" FontWeight="Bold" RenderTransformOrigin="2,1.227" ToolTip="add users to the specified group" AutomationProperties.HelpText="add users to the specified group"/>
+        <Button Name="RemoveButton" Content="Remove" HorizontalAlignment="Left" Margin="195,110,0,0" VerticalAlignment="Top" Height="33" Width="75" Foreground="#ffffff" Background="#417505" FontSize="14" FontWeight="Bold" RenderTransformOrigin="2,1.227" ToolTip="remove users from the specified group" AutomationProperties.HelpText="remove users from the specified group"/>
         <Button Name="ClearButton" Content="Clear" HorizontalAlignment="Left" Margin="330,110,0,0" VerticalAlignment="Top" Height="33" Width="75" Foreground="#ffffff" Background="#417505" FontSize="14" FontWeight="Bold" RenderTransformOrigin="2,1.227" ToolTip="clear all the fields" AutomationProperties.HelpText="clear all the fields"/>
         <TextBox Name="ResultBox" HorizontalAlignment="Left" Height="61" Width="408" Margin="30,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" ToolTip="show the result of the selected operation" AutomationProperties.HelpText="show the result of the selected operation"/>
     </Grid>
@@ -198,10 +199,25 @@ $XMLForm = [Windows.Markup.XamlReader]::Load($XMLReader)
 #Load Controls
 $CSVFilePathBox = $XMLForm.FindName('PathToCSVBox')
 $AADGroupBox = $XMLForm.FindName('AADGroupBox')
+$BrowseButton = $XMLForm.FindName('BrowseButton')
 $AddButton = $XMLForm.FindName('AddButton')
 $RemoveButton = $XMLForm.FindName('RemoveButton')
 $ClearButton = $XMLForm.FindName('ClearButton')
 $ResultBox = $XMLForm.FindName('ResultBox')
+
+#Browse Button Action
+$BrowseButton.add_click({
+
+    $openFile = [Microsoft.Win32.OpenFileDialog]@{
+                DefaultExt = '.csv'
+                Filter = 'CSV files (.csv)|*.csv'
+            }
+    $result = $openFile.ShowDialog()
+    
+    if ($result) {
+        $CSVFilePathBox.Text = $openFile.FileName
+    }
+})
 
 #Add Button Action
 $AddButton.add_click({
