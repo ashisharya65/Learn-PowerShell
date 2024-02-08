@@ -100,7 +100,7 @@ Function Set-EnvtVariables {
     $EnvtVariables = @(
         [PSCustomObject]@{
             Name  = "AZURE_CLIENT_ID"
-            Value = $CliendId
+            Value = $ClientId
         },
         [PSCustomObject]@{
             Name  = "AZURE_CLIENT_SECRET"
@@ -129,7 +129,8 @@ Function Set-EnvtVariables {
 if ($null -eq (Get-ChildItem env: | Where-Object { $_.Name -like "Azure_*" })) {
     Write-Host "`nThe environment variables for Azure AD app are not created. Hence creating..." -ForegroundColor "Yellow"
 
-    Set-EnvtVariables
+    Set-EnvtVariables
+
 }
 
 #Checking and Verifying if the latest Microsoft.Graph Module is installed or not
