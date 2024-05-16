@@ -75,31 +75,31 @@
 
     ```ps1
         $widgetArray = @(
-        [PSCustomObject]@{
-            Name   = "widget001"
-            Price  = 5.00
-            OnSale = $true
-        },
-        [PSCustomObject]@{
-            Name   = "widget002"
-            Price  = 13.00
-            OnSale = $true
-        },
-        [PSCustomObject]@{
-            Name   = "widget003"
-            Price  = 20.00
-            OnSale = $false
-        }
-    )
+            [PSCustomObject]@{
+                Name   = "widget001"
+                Price  = 5.00
+                OnSale = $true
+            },
+            [PSCustomObject]@{
+                Name   = "widget002"
+                Price  = 13.00
+                OnSale = $true
+            },
+            [PSCustomObject]@{
+                Name   = "widget003"
+                Price  = 20.00
+                OnSale = $false
+            }
+        )
 
-    foreach ($widget in $widgetArray) {
-        [PSCustomObject]@{
-            "Name"          = $widget.Name
-            "Over10Dollars" = ($widget.Price -gt 10) ? $true : $false
-            "OnSale"        = ($widget.OnSale) ? 'On Sale' : 'Not on Sale'
-            "SalePrice"     = ($widget.OnSale) ? $widget.Price * 0.85 : "---"
+        foreach ($widget in $widgetArray) {
+            [PSCustomObject]@{
+                "Name"          = $widget.Name
+                "Over10Dollars" = ($widget.Price -gt 10) ? $true : $false
+                "OnSale"        = ($widget.OnSale) ? 'On Sale' : 'Not on Sale'
+                "SalePrice"     = ($widget.OnSale) ? $widget.Price * 0.85 : "---"
+            }
         }
-    }
     ```
 
     ```ps1
