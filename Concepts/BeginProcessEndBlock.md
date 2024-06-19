@@ -76,21 +76,24 @@ The `End` block runs once after all pipeline input has been processed. It is typ
 ```powershell
 function Finalize-Example {
     [CmdletBinding()]
-    param ()
+    param (
+        [Parameter(ValueFromPipeline = $true)]
+        [int]$InputObject
+    )
     
     begin {
         Write-Output "Begin block: Initializing..."
-        $global:sum = 0
+        $sum = 0
     }
     
     process {
-        Write-Output "Process block: Processing..."
-        $global:sum += 1
+        Write-Output "Process block: Processing $InputObject..."
+        $sum += 1
     }
     
     end {
         Write-Output "End block: Finalizing..."
-        Write-Output "Total count is $global:sum"
+        Write-Output "Total count is $sum"
     }
 }
 
