@@ -2,7 +2,7 @@
 
 ## Objective
 
-Develop a PowerShell script that retrieves comprehensive system information and stores it in a custom PowerShell object. This information includes computer name, operating system, CPU, architecture, logical disks with more than 80% free space, installed applications within a specified date range, IP address of a specified network adapter, and the count of hotfixes installed within a specified date range.
+Develop a PowerShell script that retrieves comprehensive system information using Windows Management Instrumentation (WMI) and stores it in a custom PowerShell object. This information should include the computer name, operating system, CPU, architecture, logical disks with more than 80% free space, installed applications within a specified date range, the IP address of a specified network adapter, and the count of hotfixes installed within a specified date range.
 
 ## Requirements
 
@@ -11,8 +11,6 @@ Develop a PowerShell script that retrieves comprehensive system information and 
    - **NetworkAdapter**: The name of the network adapter to retrieve the IP address from.
    - **StartDate**: The start date for filtering installed applications and patches.
    - **EndDate**: The end date for filtering installed applications and patches.
-
-<br/>
 
 2. **Output**:
    A custom PowerShell object containing the following fields:
