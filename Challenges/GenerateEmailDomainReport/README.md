@@ -10,12 +10,13 @@ Develop a PowerShell script that processes a text file ( [Input.txt](https://git
    - **FilePath**: The path to the text file containing the input data.
 
 2. **Input**:
-   You have a text file containing information about individuals, including their country and email addresses. Each line in the text     
-  file contains data in the below format: 
+   You have a text file containing information about individuals, including their country and email addresses. Each line in the text   file contains data in the below format: 
 
     ```ps1
-      Johnetta,Abdallah,Orange,USA,NC,johnetta_abdallah@aol.com 
-      Louvenia,Abney,SK,Canada,S6V 6A4,louvenia_abney@hotmail.com
+      Delmy,Ahle,Providence,USA,RI,delmy.ahle@hotmail.com
+      Olen,Ailey,Staffordshire,UK,WV5 0BB,olen@gmail.com
+      Barabara,Amedro,NS,Australia,2530,barabara@amedro.net.au
+      Frank,Amend,ON,Canada,N1S 1A7,frank@yahoo.com
     ```
 
 4. **Output**:
