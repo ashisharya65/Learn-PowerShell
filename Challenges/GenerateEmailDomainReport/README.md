@@ -2,7 +2,7 @@
 
 ## Objective
 
-Develop a PowerShell script that processes a text file containing information about individuals, including their country and email addresses. The script should generate a report that shows the count of email addresses by domain (Gmail, Hotmail, Yahoo, Others) for specific countries (UK, USA, Canada).
+Develop a PowerShell script that processes a text file ( [Input.txt](https://github.com/ashisharya65/Learn-PowerShell/blob/master/Challenges/GenerateEmailDomainReport/InputFile.txt) ) containing information about individuals, including their country and email addresses. The script should generate a report that shows the count of email addresses by domain (Gmail, Hotmail, Yahoo, Others) for specific countries (UK, USA, Canada).
 
 ## Requirements
 
