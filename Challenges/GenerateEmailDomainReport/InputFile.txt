@@ -1,8 +1,3 @@
-Johnetta,Abdallah,Orange,USA,NC,johnetta_abdallah@aol.com
-Louvenia,Abney,SK,Canada,S6V 6A4,louvenia_abney@hotmail.com
-Socorro,Abrahams,Lancashire,UK,PR1 6TN,socorro_abrahams@abrahams.co.uk
-Tuyet,Abramovitz,ON,Canada,L4E 4P3,tuyet.abramovitz@abramovitz.com
-Geoffrey,Acey,Cook,USA,IL,geoffrey@gmail.com
 Weldon,Acuff,Cook,USA,IL,wacuff@gmail.com
 Rusty,Adelsperger,Cornwall,UK,PL15 9QN,rusty.adelsperger@yahoo.com
 Olga,Adessa,ON,Canada,L7P 4T1,oadessa@cox.net
@@ -14,6 +9,11 @@ Catherin,Aguele,QL,Australia,4605,caguele@gmail.com
 Brent,Ahlborn,SA,Australia,5046,bahlborn@ahlborn.com.au
 Delmy,Ahle,Providence,USA,RI,delmy.ahle@hotmail.com
 Olen,Ailey,Staffordshire,UK,WV5 0BB,olen@gmail.com
+Johnetta,Abdallah,Orange,USA,NC,johnetta_abdallah@aol.com
+Louvenia,Abney,SK,Canada,S6V 6A4,louvenia_abney@hotmail.com
+Socorro,Abrahams,Lancashire,UK,PR1 6TN,socorro_abrahams@abrahams.co.uk
+Tuyet,Abramovitz,ON,Canada,L4E 4P3,tuyet.abramovitz@abramovitz.com
+Geoffrey,Acey,Cook,USA,IL,geoffrey@gmail.com
 Renato,Airhart,AB,Canada,T2A 2H9,renato_airhart@hotmail.com
 Barabara,Amedro,NS,Australia,2530,barabara@amedro.net.au
 Frank,Amend,ON,Canada,N1S 1A7,frank@yahoo.com
