@@ -7,47 +7,35 @@ function Invoke-PSBoundParametersAction {
     )
 
     Begin {
-
         #setup our return object
         $result = [PSCustomObject]@{
-
             SuccessOne = $false
             SuccessTwo = $false
-
         }        
     }
-
+    
     Process {
-
         #use a switch statement to take actions based on passed in parameters
         switch ($PSBoundParameters.Keys) {
 
             'ParamOne' {
-
                 #perform actions if ParamOne is used
                 $result.SuccessOne = $true
-                
             }
-
+            
             'ParamTwo' {  
-
                 #perform logic if ParamTwo is used
                 $result.SuccessTwo = $true
 
             }
-
-            Default {
-                
+            Default {   
                 Write-Warning "Unhandled parameter -> [$($_)]"
-
             }
         }        
     }
-
+    
     End {
-
         return $result
-
     }
 }
 
