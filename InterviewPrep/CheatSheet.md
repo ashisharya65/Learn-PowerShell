@@ -968,4 +968,4 @@ ForEach -Parallel → PS 7 only, uses runspaces
 > **Day 2 Focus**: Sections 9-15 (File ops, APIs, DSC, AD, Q&A)
 > **Before Interview**: Read the Quick Revision Cheat Sheet and Q&A section
 
-Good luck, Ashish! 🚀
+Good luck! 🚀
