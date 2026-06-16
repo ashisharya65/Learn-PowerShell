@@ -1,4 +1,4 @@
-# Module 01 — Notes: Regex Foundations & PowerShell Operators
+# Regex Foundations & PowerShell Operators
 
 ---
 
