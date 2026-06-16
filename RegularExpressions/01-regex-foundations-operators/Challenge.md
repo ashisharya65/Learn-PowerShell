@@ -1,4 +1,4 @@
-# Module 01 — Challenge: Regex Foundations & PowerShell Operators
+# Module 01 — Challenge
 
 > **Instructions:**
 > - Each challenge gives you a **scenario** and **requirements**.
