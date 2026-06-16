@@ -1,113 +1,118 @@
-# PowerShell Regex Mastery
+# 🎯 PowerShell Regular Expression Mastery
 
-A practical, hands-on guide to mastering **Regular Expressions (Regex) in PowerShell** from beginner to advanced level.
+Welcome to the ultimate repository for mastering Regular Expressions (Regex) specifically tailored for **PowerShell** and the **.NET regex engine**. 
 
-This repository is designed for PowerShell Developers, Automation Engineers, DevOps Engineers, Cloud Engineers, Platform Engineers, and SREs who want to confidently use Regex in real-world automation scenarios.
+Whether you are automating cloud infrastructure parsing, auditing security logs, or sanitizing complex data streams, this repository serves as your structured, hands-on guide to evolving from a regex novice to an enterprise-grade pattern engineer.
 
-## Why Learn Regex?
+## 🚀 Why PowerShell Regex?
 
-Regex is one of the most powerful skills a PowerShell developer can have. It enables you to:
-
-* Search and extract information from text
-* Validate user input
-* Parse logs and configuration files
-* Process CSV, JSON, and XML data
-* Automate repetitive text manipulation tasks
-* Build more intelligent PowerShell scripts
-
-## What You'll Learn
-
-### Fundamentals
-
-* Introduction to Regular Expressions
-* Regex Engine Basics
-* Literal Matching
-* Character Classes
-* Quantifiers
-* Anchors
-* Alternation
-
-### Intermediate Concepts
-
-* Capturing Groups
-* Named Capturing Groups
-* Backreferences
-* Greedy vs Lazy Matching
-* Lookaheads
-* Lookbehinds
-
-### PowerShell Integration
-
-* `-match`
-* `-notmatch`
-* `-replace`
-* `-split`
-* `Select-String`
-* `switch -regex`
-* `[regex]` Class
-* RegexOptions
-
-### Real-World Use Cases
-
-* Log File Parsing
-* Text Extraction
-* File Processing
-* Input Validation
-* Active Directory Automation
-* Azure & Cloud Automation
-* CI/CD Validation
-* Configuration Analysis
-
-### Advanced Topics
-
-* Regex Performance Optimization
-* Debugging Regex Patterns
-* Production-Ready Regex Design
-* Interview Preparation
-
-## Repository Structure
-
-```text
-01-Fundamentals/
-02-Character-Classes/
-03-Quantifiers/
-04-Anchors/
-05-Groups/
-06-Lookarounds/
-07-PowerShell-Regex/
-08-Real-World-Scenarios/
-09-Projects/
-10-Interview-Questions/
-```
-
-## Learning Approach
-
-Each module contains:
-
-* Concept Explanation
-* PowerShell Examples
-* Real-World Scenarios
-* Practice Exercises
-* Challenge Questions
-* Solutions and Explanations
-
-## Prerequisites
-
-* Basic PowerShell knowledge
-* Windows PowerShell or PowerShell 7+
-* Willingness to practice regularly
-
-## Goal
-
-By the end of this repository, you will be able to:
-
-* Read complex Regex patterns confidently
-* Write production-ready Regex expressions
-* Debug Regex issues efficiently
-* Parse and transform text using PowerShell
-* Build automation solutions using Regex
-* Answer Regex interview questions with confidence
+PowerShell doesn't just use standard regex—it leverages the incredibly robust **.NET Regular Expression Engine**. This gives you advanced capabilities out of the box, such as:
+* **Variable-length lookbehinds** (a rare superpower compared to other engines).
+* Seamless integration via native operators (`-match`, `-replace`, `-split`).
+* Direct access to the accelerated `[regex]` accelerator and underlying .NET classes.
+* Deep integration with `switch -Regex` for high-performance multi-pattern dispatching.
 
 ---
 
-**Learn → Practice → Automate → Master**
+## 📚 Module Details
+
+### Module 01 — Regex Foundations & PowerShell Operators
+* What is a regular expression and why it matters
+* Literal matching vs. metacharacter matching
+* PowerShell regex operators: `-match`, `-notmatch`, `-cmatch`, `-imatch`
+* The automatic `$Matches` hashtable
+* Case sensitivity in PowerShell regex (default case-insensitive)
+* Escaping special characters with `\` and `[regex]::Escape()`
+
+### Module 02 — Character Classes & Shorthand Escapes
+* Character classes: `[abc]`, `[a-z]`, `[0-9]`
+* Negated classes: `[^abc]`
+* POSIX-style vs. .NET-style classes
+* Shorthand escapes: `\d`, `\D`, `\w`, `\W`, `\s`, `\S`
+* The dot `.` metacharacter and its behavior
+* Unicode category escapes: `\p{L}`, `\p{N}`, etc.
+
+### Module 03 — Quantifiers — Greedy, Lazy & Possessive
+* `*` (zero or more), `+` (one or more), `?` (zero or one)
+* Exact repetition: `{n}`, `{n,}`, `{n,m}`
+* Greedy vs. lazy quantifiers (`*?`, `+?`, `??`, `{n,m}?`)
+* Understanding backtracking
+* When and why greedy causes unexpected results
+
+### Module 04 — Anchors, Boundaries & Multiline Mode
+* `^` (start of string) and `$` (end of string)
+* `\A` (absolute start) and `\Z` / `\z` (absolute end)
+* Word boundaries: `\b` and `\B`
+* Multiline mode: `(?m)` — how `^` and `$` change behavior
+* Singleline mode: `(?s)` — how `.` changes behavior
+
+### Module 05 — Grouping, Capturing & Backreferences
+* Parentheses `()` for grouping
+* Captured groups and `$Matches[1]`, `$Matches[2]`, etc.
+* Backreferences: `\1`, `\2` inside the pattern
+* Named captures: `(?<name>pattern)` and `$Matches['name']`
+* Nested groups and group numbering rules
+
+### Module 06 — Alternation & Non-Capturing Groups
+* The pipe `|` for alternation (OR logic)
+* Order matters in alternation
+* Non-capturing groups: `(?:pattern)`
+* Combining alternation with quantifiers
+* Inline modifiers: `(?i)`, `(?s)`, `(?m)`, `(?x)`
+* Free-spacing mode `(?x)` for readable patterns
+
+### Module 07 — Lookahead & Lookbehind Assertions
+* Positive lookahead: `(?=pattern)`
+* Negative lookahead: `(?!pattern)`
+* Positive lookbehind: `(?<=pattern)`
+* Negative lookbehind: `(?<!pattern)`
+* Combining lookarounds for complex assertions
+* Variable-length lookbehind in .NET (unique advantage)
+
+### Module 08 — The `[regex]` .NET Class & Named Captures
+* `[regex]::Match()` and `[regex]::Matches()` — single vs. all matches
+* `[regex]::Replace()` with match evaluators / script blocks
+* `[regex]::Split()`
+* `[regex]::IsMatch()` — boolean test
+* `RegexOptions` flags: `IgnoreCase`, `Multiline`, `Singleline`, `Compiled`, etc.
+* `Match` object properties: `.Value`, `.Index`, `.Length`, `.Groups`, `.Success`
+
+### Module 09 — `switch -Regex`, `-replace`, and `-split`
+* `switch -Regex` for multi-pattern dispatching
+* `-replace` operator with capture-group substitution (`$1`, `${name}`)
+* `-replace` with script block evaluators (PowerShell 6+)
+* `-split` operator with regex delimiters
+* `-split` with capture groups to keep delimiters
+* Combining operators in pipelines
+
+### Module 10 — Real-World Patterns — Logs, IPs, Emails, Paths
+* Parsing Windows Event Logs with regex
+* Validating and extracting IPv4 / IPv6 addresses
+* Extracting email addresses and URLs
+* Parsing file paths (UNC, drive-letter, Linux)
+* Parsing structured text: CSV edge cases, INI files, registry exports
+* Building a reusable pattern library
+
+### Module 11 — Performance, Optimization & Regex Pitfalls
+* Catastrophic backtracking and how to avoid it
+* Atomic groups: `(?>pattern)`
+* Compiled regex: `[regex]::new($pattern, 'Compiled')`
+* Benchmarking regex with `Measure-Command`
+* Common mistakes: over-escaping, greedy traps, anchoring failures
+* When NOT to use regex (and what to use instead)
+
+### Module 12 — Capstone — Build a PowerShell Log Analyzer
+* Parse multi-format log files (IIS, Syslog, custom)
+* Extract timestamps, severity, source, and message
+* Build summary statistics with `Group-Object`
+* Export clean, structured data
+* Full code review and optimization pass
+
+---
+
+## 🛠️ How to Use This Repo
+1.  **Navigate By Module:** Each directory contains an `README.md` breakdown of the concept, a `.ps1` file containing runnable syntax examples, and a challenge lab.
+2.  **Run Examples:** Open your terminal or VS Code, load up the module scripts, and run the snippets natively to see how the `$Matches` engine behaves in real-time.
+
+> [!NOTE]
+> Each module strictly builds on the foundation of the previous one. We go deep on mechanics, not just quick copy-paste hacks. Try to complete the practice challenges before checking the solutions!
