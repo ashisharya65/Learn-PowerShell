@@ -322,11 +322,3 @@ Total down: 3
 ```
 
 ---
-
-## Submission
-
-Once you complete all 10 challenges, send me:
-1. Any challenges where you got stuck.
-2. Your quiz answers (Q1–Q10 from the exercises file).
-
-I will review your work, explain any mistakes, and we move to **Module 02**! 🚀
