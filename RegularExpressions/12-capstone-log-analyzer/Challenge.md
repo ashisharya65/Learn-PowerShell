@@ -354,22 +354,3 @@ Total rows exported: 18
 ```
 
 ---
-
-## Regex Concepts Used in This Capstone
-
-| Concept | Where Used |
-|---|---|
-| Named captures `(?<name>)` | All three parsers |
-| Anchors `^` `$` | All patterns |
-| Character classes `[A-Za-z]` | Syslog month, method |
-| Shorthand `\d` `\S` `\w` | Timestamps, IPs, hosts |
-| Quantifiers `{n}` `+` `*` | All patterns |
-| Non-capturing `(?:...)` | IP octet repetition |
-| Free-spacing `(?x)` | IIS and syslog patterns |
-| Multiline parsing | Section splitting |
-| `switch -Regex` | Syslog level classifier |
-| `-match` with `$Matches` | All parsers |
-| `[regex]::Matches()` | All match collections |
-| Array filtering with `-match` | Section splitting |
-
----
