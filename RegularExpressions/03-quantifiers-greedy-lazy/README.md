@@ -1,4 +1,4 @@
-# Module 03 — Quantifiers: Greedy & Lazy
+# Module 03 — Challenge
 
 ---
 
